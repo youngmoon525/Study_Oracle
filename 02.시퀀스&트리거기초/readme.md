@@ -26,6 +26,6 @@ INSERT INTO tSale VALUES (seqSale.NEXTVAL, '고주몽', '고등어');
 SELECT seqSale.CURRVAL FROM DUAL;
 ```
 
-![Untitled](%E1%84%89%E1%85%B5%E1%84%8F%E1%85%AF%E1%86%AB%E1%84%89%E1%85%B3%20b027e6069cfb47a9b84c042c0de52498/Untitled.png)
+![Untitled](img/Untitled.png)
 
 ##

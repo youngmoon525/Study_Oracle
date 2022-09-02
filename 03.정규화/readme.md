@@ -24,21 +24,21 @@
 - 단일값이 아니어서 = 연산자로 비교할 수 없으며 WHERE project LIKE '%홍콩수출건%' 식으로 부분 문자열을 검색해야 한다.
 - 수정은 더 골때린다. 이관이 어렵다.
 
-![Untitled](img/Untitled 1.png)
+![Untitled](img/Untitled%201.png)
 
-![Untitled](img/Untitled 2.png)
+![Untitled](img/Untitled%202.png)
 
-![필드를 여러개로 나누어 원자성을 확보한경우](img/Untitled 3.png)
+![필드를 여러개로 나누어 원자성을 확보한경우](img/Untitled%203.png)
 
 필드를 여러개로 나누어 원자성을 확보한경우
 
-![Untitled](img/Untitled 4.png)
+![Untitled](img/Untitled%204.png)
 
 ## 1정규화에서 해야할것
 
-![Untitled](img/Untitled 5.png)
+![Untitled](img/Untitled%205.png)
 
-![Untitled](img/Untitled 6.png)
+![Untitled](img/Untitled%206.png)
 
 - 프로젝트 개수에 제한이 없으며 기억 장소도 꼭 필요한 만큼만 사용한다.
 - 프로젝트 테이블에 상세 정보를 추가하기도 쉽다.
@@ -49,7 +49,7 @@ UPDATE tProject SET 담당자='문종민' WHERE 프로젝트='TV 광고건';
 SELECT 프로젝트명 FROM tProject WHERE 담당자 = '김상형';
 - 관계를 맺는 테이블은 누가 업무의 중심인가에 따라 부모, 자식 관계가 된다. 업무의 주체를부모 또는 마스터(Master)라고 하며 반대쪽을 자식 또는 디테일(Detail)이라고 한다.
 
-![Untitled](img/Untitled 7.png)
+![Untitled](img/Untitled%207.png)
 
 ## 제 2정규화
 
@@ -57,7 +57,7 @@ SELECT 프로젝트명 FROM tProject WHERE 담당자 = '김상형';
 - **기본키를 알면 나머지 정보도 알 수 있다는 뜻이다.**
 - **일반 필드끼리는 종속 관계가 없으며 상호 독립적이다.**
 
-![Untitled](img/Untitled 8.png)
+![Untitled](img/Untitled%208.png)
 
 - 프로젝트 번호에 따라 프로젝트 이름과 담당자가 결정되므로 이들은 종속 관계이다.
 - 담당자의 주소나 월급은 프로젝트와는 직접적인 상관이 없다.
@@ -67,20 +67,20 @@ SELECT 프로젝트명 FROM tProject WHERE 담당자 = '김상형';
 - 모든 필드는 복합키 전체에 종속되어야 하며 일부에만 종속되서는 안된다.
 - 고객 한명이 여러 건의 주문을 낼 수 있어 고객명과 주문번호를 복합키로 설정
 
-![Untitled](img/Untitled 9.png)
+![Untitled](img/Untitled%209.png)
 
-![Untitled](img/Untitled 10.png)
+![Untitled](img/Untitled%2010.png)
 
-![Untitled](img/Untitled 11.png)
+![Untitled](img/Untitled%2011.png)
 
-![Untitled](img/Untitled 12.png)
+![Untitled](img/Untitled%2012.png)
 
 ## 제 3 정규화
 
 - **기본키가 아닌 일반 필드끼리 서로 종속되지 않도록 하는 것이다.**
 - **직원 테이블에 직원이 가입한 사내 동호회 관련 필드를 추가**
 
-![Untitled](img/Untitled 13.png)
+![Untitled](img/Untitled%2013.png)
 
 - 월급과 가입한 동호회 이름은 기본키인 직원명에 종속적이다.
 
@@ -94,16 +94,16 @@ SELECT 프로젝트명 FROM tProject WHERE 담당자 = '김상형';
 - 동호회는 직원의 속성이 아니라 별도의 엔터티이다.
 - 분석에 오류가 있으니 모델링도 잘못될 수밖에 없다.
 
-![Untitled](img/Untitled 14.png)
+![Untitled](img/Untitled%2014.png)
 
-![Untitled](img/Untitled 15.png)
+![Untitled](img/Untitled%2015.png)
 
 - 동호회와 방번호, 회원수의 관계는 종속적이다. 동호회를 알면 방번호나 회원수도 알 수 있다.
 - 일반 필드끼리는 독립적이어야 하는데 그렇지 않아 중복이 발생한다. 이럴 경우 직원 테이블과 동호회 테이블을 따로 분리하여 중복을 제거한다.
 
-![Untitled](img/Untitled 16.png)
+![Untitled](img/Untitled%2016.png)
 
-![Untitled](img/Untitled 17.png)
+![Untitled](img/Untitled%2017.png)
 
 ## 역정규화
 
@@ -114,6 +114,6 @@ SELECT 프로젝트명 FROM tProject WHERE 담당자 = '김상형';
 - 의도적으로 데이터를 중복시켜 속도 향상을 꾀하고 용량상의 이득을 포기하는 것이다.
 - 정규화의 반대 개념인 역정규화라고 한다. 튜닝 과정에서 주로 수행한다.
 
-![Untitled](img/Untitled 18.png)
+![Untitled](img/Untitled%2018.png)
 
-![Untitled](img/Untitled 19.png)
+![Untitled](img/Untitled%2019.png)

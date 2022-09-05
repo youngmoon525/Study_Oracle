@@ -18,6 +18,6 @@ PIVOT ( SUM(amount)) --반드시 함수로 그룹핑을 해줘야한다.
 </aside>
 
 
-![Untitled](img/Untitled.png)
+![Untitled](img/Untitled.PNG)
 
 ##

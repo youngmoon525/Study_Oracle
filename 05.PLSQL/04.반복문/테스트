@@ -1,0 +1,11 @@
+SET SERVEROUTPUT ON;
+DECLARE
+  iVar NUMBER(3) ;
+BEGIN
+  iVar := 1;
+  WHILE iVar <= 100
+  LOOP
+    DBMS_OUTPUT.PUT_LINE(iVar);
+    iVar := iVar +1;
+    //iVar++ ㅅㅂ
+   END LOOP;

@@ -3,7 +3,7 @@ on:
     - cron: '* * * * *'
     
 jobs:
-  test_schedule:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: echo repository name

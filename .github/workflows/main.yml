@@ -8,13 +8,13 @@ jobs:
         with:
           repository: youngmoon525/Study_Oracle
           token: ${{ secrets.KEY }}
-          path: Android301
+          path: Study_Oracle
 
       - name: Add date and push
         run: |
-          date >> date.txt
+          date > generated.txt
           git add .
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
-          git commit -am "Inject Date"
+          git commit -m "test"
           git push

@@ -12,7 +12,7 @@ jobs:
 
       - name: Add date and push
         run: |
-          date > generated.txt
+          date >> generated.txt
           git add .
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"

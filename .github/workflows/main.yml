@@ -3,18 +3,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: echo repository name
+        run: echo "${{ github.repository }}"
+
       - name: repository checkout
         uses: actions/checkout@v3
         with:
-          repository: youngmoon525/Study_Oracle
+          repository: ${{ github.repository }}
           token: ${{ secrets.KEY }}
           path: Study_Oracle
 
       - name: Add date and push
         run: |
-          date >> generated.txt
+          cd Study_Oracle
+          date >> date.txt
           git add .
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
-          git commit -m "test"
+          git commit -am "Inject Date"
           git push

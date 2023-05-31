@@ -1,0 +1,21 @@
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository checkout
+        uses: actions/checkout@v2
+        with:
+          repository: youngmoon525/Study_Oracle
+          token: ${{ secrets.KEY }}
+          path: Android301
+
+      - name: Add date and push
+        run: |
+          cd Study_Oracle
+          date >> date.txt
+          git add .
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git commit -am "Inject Date"
+          git push

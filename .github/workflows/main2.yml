@@ -1,10 +1,12 @@
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/2 * * * *'
     
 jobs:
   run:
+  
     runs-on: ubuntu-latest
+    
     steps:
       - name: echo repository name
         run: echo "${{ github.repository }}"

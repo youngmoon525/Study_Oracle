@@ -7,7 +7,3 @@
   * 이것이 오라클이다
   * 김상형의 SQL정복.
   * IT CookBook, 데이터베이스 개론(1,2판)
-Sat Jun  3 06:14:44 UTC 2023
-Sat Jun  3 12:21:34 UTC 2023
-Sat Jun  3 18:13:22 UTC 2023
-Sun Jun  4 01:24:09 UTC 2023

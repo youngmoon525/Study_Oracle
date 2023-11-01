@@ -21,7 +21,7 @@ jobs:
       - name: Add date and push
         run: |
           cd Study_Oracle
-          date >> date.txt
+          date > date.txt
           git add .
           git config --global user.email "youngmoon525@naver.com"
           git config --global user.name "youngmoon525"
